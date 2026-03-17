@@ -1,4 +1,4 @@
-class CartaMostro(nm: String, lv: Int, pw: Int, atr: String){
+class CartaMostro(nm: String, lv: Int, atr: String, pw: Int){
     private val nombre = nm
     private val nivel = lv
     private val poder = pw
