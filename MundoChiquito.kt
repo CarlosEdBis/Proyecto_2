@@ -5,15 +5,11 @@ fun mundoChiquito(cartas: MutableList<CartaMostro>){
 
     for(c1 in cartas){
         for(c2 in cartas){
-            if(c1!=c2){
-                if(valido(c1,c2)){
-                    for(c3 in cartas){
-                        if(c2!=c3){
-                            if (valido(c2, c3)){
-                                println(c1.nombre() + " " + c2.nombre() + " " + c3.nombre())
-                            }
-                        }
-                    }
+            if(c1!=c2 && valido(c1,c2)){
+                for(c3 in cartas){                    
+                    if (c2!=c3 && valido(c2, c3)){
+                        println(c1.nombre() + " " + c2.nombre() + " " + c3.nombre())
+                    }                
                 }
             }
         }
