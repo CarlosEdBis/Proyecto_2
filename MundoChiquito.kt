@@ -60,7 +60,7 @@ fun entrada(): MutableList<CartaMostro>{
     var cartas: MutableList<CartaMostro> =mutableListOf()
 
     File(archivo).bufferedReader().useLines { lines ->
-        lines.forEach { line ->
+        lines.drop(1).forEach { line ->
             val datos = line.split(",")
             cartas.add(CartaMostro(datos[0], datos[1].toInt(), datos[2], datos[3].toInt()))
         }
