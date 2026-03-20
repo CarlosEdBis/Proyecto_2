@@ -1,7 +1,7 @@
 KC = kotlinc
 KFLAGS = -include-runtime
 PROG = Main.jar
-SRC = MundoChiquito.kt CartaMostro.kt
+SRC = MundoChiquito.kt ListaAdyacenciaGrafo.kt Grafo.kt CartaMostro.kt
 SC = runMain.sh
 
 all:
