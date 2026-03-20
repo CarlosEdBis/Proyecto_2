@@ -1,7 +1,6 @@
 import java.io.File
 
 fun mundoChiquito(cartas: MutableList<CartaMostro>){
-    val pares: Grafo<CartaMostro> = ListaAdyacenciaGrafo()
 
     for(c1 in cartas){
         for(c2 in cartas){
@@ -14,28 +13,6 @@ fun mundoChiquito(cartas: MutableList<CartaMostro>){
             }
         }
     }
-    println()
-    println()
-    /* Revisa si este código te parece útil
-    
-    for(i in cartas){
-        for(j in cartas){
-            if(valido(i,j)){
-                pares.conectar(i,j)
-                pares.conectar(j,i)
-            }
-        }
-    }
-    for(c1 in cartas){
-        val conectar1 = pares.obtenerArcosSalida(c1)
-        for(c2 in conectar1){
-            val conectar2 = pares.obtenerArcosSalida(c2)
-            for(c3 in conectar2){
-                println(c1.nombre() + " " + c2.nombre() + " " + c3.nombre())
-            }
-        }
-    }
-    */
 }
 
 fun valido(ct1: CartaMostro, ct2: CartaMostro): Boolean{
